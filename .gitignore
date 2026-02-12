@@ -137,3 +137,21 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Build output (users should build locally)
+build/
+dist/
+
+# Test and development files
+test-*.js
+test-*.ts
+
+# Claude CLI settings (user-specific)
+.claude/
+
+# Screenshots and images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
