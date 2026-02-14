@@ -393,12 +393,6 @@ MIT License - 詳細は[LICENSE](LICENSE)を参照してください。
 
 AKASHI SHOGO
 
-## サポート
-
-このプロジェクトが役に立った場合は、コーヒーをおごっていただけると嬉しいです！
-
-<a href="https://www.buymeacoffee.com/akashishogo"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=akashishogo&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
-
 ---
 
 ## 謝辞
