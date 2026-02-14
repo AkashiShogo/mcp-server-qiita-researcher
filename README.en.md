@@ -4,6 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@akashishogo/mcp-server-qiita-researcher)](https://www.npmjs.com/package/@akashishogo/mcp-server-qiita-researcher)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/akashishogo)
 
 [日本語版README](./README.md)
 
