@@ -1,5 +1,5 @@
 {
-  "name": "mcp-server-qiita-researcher",
+  "name": "@akashishogo/mcp-server-qiita-researcher",
   "version": "1.0.0",
   "description": "A powerful Qiita MCP server with trend scouting and smart reading capabilities.",
   "type": "module",
@@ -7,11 +7,16 @@
   "bin": {
     "mcp-server-qiita-researcher": "build/index.js"
   },
+  "files": [
+    "build",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc && chmod +x build/index.js",
     "start": "node build/index.js",
     "dev": "tsc --watch",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -21,6 +26,9 @@
   ],
   "author": "",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.1",
     "axios": "^1.7.9",
