@@ -1,25 +1,25 @@
 # mcp-server-qiita-researcher
 
-**Not just an API wrapper, but a Research Assistant.**
+**単なるAPIラッパーではなく、リサーチアシスタント。**
 
 [![npm version](https://img.shields.io/npm/v/@akashishogo/mcp-server-qiita-researcher)](https://www.npmjs.com/package/@akashishogo/mcp-server-qiita-researcher)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[日本語版README](./README.ja.md)
+[English README](./README.en.md)
 
 ---
 
-## 🎬 Demo
+## 🎬 デモ
 
 ![Demo Animation](docs/demo.gif)
 
-> Ask Claude "Show me React trends on Qiita" and watch it instantly return high-quality articles + community insights
+> Claudeに「Reactのトレンドを教えて」と尋ねるだけで、シュパパパッと高品質な記事+コミュニティの知見が返ってきます
 
 ---
 
-## ⚡ Get Started in 3 Seconds
+## ⚡ 3秒で始める
 
-**Just paste this into your Claude Desktop config file:**
+**Claude Desktopの設定ファイルに、これを貼るだけ：**
 
 ```json
 {
@@ -35,100 +35,100 @@
 }
 ```
 
-**Restart Claude Desktop** → Done 🎉
+**Claude Desktopを再起動** → 完了🎉
 
 <details>
-<summary>📁 Find your config file location</summary>
+<summary>📁 設定ファイルの場所を確認する</summary>
 
 **Claude Desktop:**
 - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 - **Linux:** `~/.config/Claude/claude_desktop_config.json`
 
-Create the file if it doesn't exist.
+ファイルが存在しない場合は新規作成してください。
 
 </details>
 
 <details>
-<summary>🔑 Add Qiita Access Token (Optional but Recommended)</summary>
+<summary>🔑 Qiitaアクセストークンを設定する（オプションだが推奨）</summary>
 
-**Without token:** 60 requests/hour
-**With token:** 1000 requests/hour
+**トークンなし:** 60リクエスト/時
+**トークンあり:** 1000リクエスト/時
 
-1. Go to [Qiita Token Settings](https://qiita.com/settings/tokens/new)
-2. Create a new token with read permissions
-3. Paste the token into `QIITA_ACCESS_TOKEN` above
+1. [Qiitaトークン設定](https://qiita.com/settings/tokens/new)にアクセス
+2. 読み取り権限で新しいトークンを作成
+3. トークンを上記の`QIITA_ACCESS_TOKEN`に貼り付け
 
 </details>
 
 ---
 
-## Why This MCP Server?
+## なぜこのMCPサーバー？
 
-Most Qiita MCP servers are just thin wrappers around the Qiita API.
-**mcp-server-qiita-researcher** differentiates itself with three key innovations:
+ほとんどのQiita MCPサーバーは、Qiita APIの薄いラッパーに過ぎません。
+**mcp-server-qiita-researcher**は、3つの革新的な機能で差別化を図っています。
 
-### 🎯 Smart Reading: Article + Valuable Comments
+### 🎯 スマートリーディング：記事+有益なコメント
 
-**Killer feature** - Fetch not just the article, but also the most valuable comments (sorted by reactions, TOP 3) in a single call
+**キラー機能** - 記事だけでなく、最も価値のあるコメント（リアクション数順TOP3）を1回の呼び出しで取得
 
-- Parallel API calls for speed
-- Automatically gather community insights
-- Clean HTML removal for token efficiency
+- 並列API呼び出しによる高速化
+- コミュニティの知見や洞察を自動収集
+- トークン効率化のためのHTMLクリーンアップ
 
-### 📈 Trend Scouting: One-Click Trend Discovery
+### 📈 トレンドスカウト：ワンクリックでトレンド発見
 
-Discover what's trending on Qiita without complex query syntax or date calculations
+複雑なクエリ構文や日付計算なしで、Qiitaのトレンド記事を発見
 
-- `weekly`: Last 7 days, 20+ stocks
-- `monthly`: Last 30 days, 50+ stocks
-- `new_arrival`: Last 2 days, 5+ stocks
-- Optional topic filtering
+- `weekly`：過去7日間、20ストック以上
+- `monthly`：過去30日間、50ストック以上
+- `new_arrival`：過去2日間、5ストック以上
+- オプションでトピック絞り込み
 
-### 🔍 Noise Reduction: Quality-First Search
+### 🔍 ノイズ削減：品質重視の検索
 
-Automatically filter out low-quality articles by default (configurable stock threshold)
+デフォルトで低品質な記事を自動的に除外（ストック数閾値は設定可能）
 
-- Auto-appends `stocks:>N` filter to queries
-- Removes token-heavy HTML (iframes, images, scripts)
-- Smart truncation at paragraph boundaries
-
----
-
-## Comparison with Other Qiita MCP Servers
-
-| Feature | This Server | Others |
-|---------|------------|--------|
-| **Article + Comments Together** | ✅ Parallel fetch | ❌ Article only |
-| **Auto Quality Filtering** | ✅ Stock threshold | ❌ None |
-| **Auto Trend Calculation** | ✅ One-click | ❌ Manual query |
-| **HTML Cleanup** | ✅ cheerio | ❌ None |
-| **Japanese Error Messages** | ✅ Full support | ⚠️ English only |
-| **Type Safety** | ✅ TypeScript + Zod | ⚠️ Partial |
+- クエリに自動で`stocks:>N`フィルタを追加
+- トークン負荷の高いHTML（iframe、画像、スクリプト）を削除
+- 段落境界でのスマート切り詰め
 
 ---
 
-## Usage
+## 他のQiita MCPサーバーとの比較
 
-Just talk to Claude naturally:
+| 機能 | 本サーバー | 他 |
+|------|-----------|-----|
+| **記事+コメント同時取得** | ✅ 並列取得 | ❌ 記事のみ |
+| **自動品質フィルタリング** | ✅ ストック閾値 | ❌ なし |
+| **トレンド自動計算** | ✅ ワンクリック | ❌ 手動クエリ |
+| **HTMLクリーンアップ** | ✅ cheerio | ❌ なし |
+| **日本語エラーメッセージ** | ✅ 完全対応 | ⚠️ 英語のみ |
+| **型安全性** | ✅ TypeScript + Zod | ⚠️ 部分的 |
 
-💬 **"Show me TypeScript trends on Qiita"**
-→ `get_tech_trends` automatically collects weekly trends
+---
 
-💬 **"Search for React hooks articles"**
-→ `search_articles` filters high-quality articles only
+## 使い方
 
-💬 **"Summarize this Qiita article: https://qiita.com/.../items/abc123"**
-→ `read_article_smart` fetches article + valuable comments at once
+Claudeに自然に話しかけるだけ：
+
+💬 **「Qiitaで『TypeScript』のトレンド記事を教えて」**
+→ `get_tech_trends` で週間トレンドを自動収集
+
+💬 **「『React hooks』について検索して」**
+→ `search_articles` で高品質記事のみをフィルタリング
+
+💬 **「このQiita記事を要約して: https://qiita.com/.../items/abc123」**
+→ `read_article_smart` で記事+有益なコメントを一括取得
 
 ---
 
 <details>
-<summary>🖥️ For Claude Code CLI</summary>
+<summary>🖥️ Claude Code CLIで使う場合</summary>
 
-### Config File
+### 設定ファイル
 
-Edit `~/.claude.json`:
+`~/.claude.json` を編集：
 
 ```json
 {
@@ -144,29 +144,29 @@ Edit `~/.claude.json`:
 }
 ```
 
-### Launch
+### 起動
 
 ```bash
 claude
 ```
 
-Try in Claude:
+Claudeで試してみる：
 ```
-Show me React trends on Qiita
+Qiitaで「React」のトレンドを教えて
 ```
 
-✅ Three tools (`search_articles`, `get_tech_trends`, `read_article_smart`) are now available
+✅ 3つのツール（`search_articles`、`get_tech_trends`、`read_article_smart`）が使えるようになります
 
 </details>
 
 ---
 
 <details>
-<summary>🔧 Developer Setup (Build from Source)</summary>
+<summary>🔧 開発者向けセットアップ（ソースコードからビルド）</summary>
 
-For developers who want to modify the code:
+コードを修正・カスタマイズしたい場合：
 
-### Clone and Build
+### クローンとビルド
 
 ```bash
 git clone https://github.com/yourusername/mcp-server-qiita-researcher.git
@@ -175,16 +175,16 @@ npm install
 npm run build
 ```
 
-### Config File
+### 設定ファイル
 
-Use `node` instead of `npx`:
+`npx`の代わりに`node`を使用：
 
 ```json
 {
   "mcpServers": {
     "qiita-researcher": {
       "command": "node",
-      "args": ["/absolute/path/mcp-server-qiita-researcher/build/index.js"],
+      "args": ["/絶対パス/mcp-server-qiita-researcher/build/index.js"],
       "env": {
         "QIITA_ACCESS_TOKEN": ""
       }
@@ -193,33 +193,33 @@ Use `node` instead of `npx`:
 }
 ```
 
-**Get absolute path:**
+**絶対パスの確認:**
 ```bash
 cd mcp-server-qiita-researcher
 pwd
 ```
 
-### Development Commands
+### 開発コマンド
 
 ```bash
-npm run dev    # Watch mode (auto-rebuild on changes)
-npm run build  # Build
-npm start      # Verify startup
+npm run dev    # ウォッチモード（変更を自動検知）
+npm run build  # ビルド
+npm start      # 起動確認
 ```
 
-### Project Structure
+### プロジェクト構造
 
 ```
 src/
-├── index.ts              # MCP server entry point
-├── qiitaClient.ts        # Qiita API client
-├── types.ts              # Zod schemas + TypeScript types
-├── constants.ts          # Configuration
+├── index.ts              # MCPサーバーエントリーポイント
+├── qiitaClient.ts        # Qiita APIクライアント
+├── types.ts              # Zodスキーマ + TypeScript型
+├── constants.ts          # 設定
 └── utils/
-    ├── dateUtils.ts      # Date calculations
-    ├── queryBuilder.ts   # Query construction
-    ├── htmlCleaner.ts    # HTML cleanup (cheerio)
-    └── textTruncator.ts  # Smart truncation
+    ├── dateUtils.ts      # 日付計算
+    ├── queryBuilder.ts   # クエリ構築
+    ├── htmlCleaner.ts    # HTMLクリーンアップ（cheerio）
+    └── textTruncator.ts  # スマート切り詰め
 ```
 
 </details>
@@ -227,174 +227,174 @@ src/
 ---
 
 <details>
-<summary>📚 API Reference</summary>
+<summary>📚 API リファレンス</summary>
 
-## `search_articles` - Quality-Focused Search
+## `search_articles` - 品質重視の検索
 
 ```json
 {
-  "query": "React hooks",           // Search keywords
-  "sort": "stock",                  // "rel" (relevance) | "stock" (stock count)
-  "threshold_stocks": 20            // Minimum stock count (default: 10)
+  "query": "React hooks",           // 検索キーワード
+  "sort": "stock",                  // "rel" (関連度順) | "stock" (ストック数順)
+  "threshold_stocks": 20            // 最小ストック数（デフォルト: 10）
 }
 ```
 
-**What it does:**
-- Auto-filters low-quality articles
-- Returns clean, token-efficient summaries
+**動作:**
+- 低品質記事を自動除外
+- トークン効率の良いクリーンなサマリーを返却
 
 ---
 
-## `get_tech_trends` - Trend Discovery
+## `get_tech_trends` - トレンド発見
 
 ```json
 {
   "scope": "weekly",                // "weekly" | "monthly" | "new_arrival"
-  "topic": "React"                  // Optional: filter by tag
+  "topic": "React"                  // オプション：タグで絞り込み
 }
 ```
 
-**What it does:**
-- Automatically calculates date ranges
-- Applies appropriate stock thresholds
-- Returns trending articles without complex query syntax
+**動作:**
+- 日付範囲を自動計算
+- 適切なストック閾値を適用
+- 複雑なクエリ構文なしでトレンド記事を取得
 
 ---
 
-## `read_article_smart` ⭐ - Article + Comments Together
+## `read_article_smart` ⭐ - 記事+コメント一括取得
 
 ```json
 {
-  "item_id": "abc123def456"         // Article ID from URL
+  "item_id": "abc123def456"         // URLの末尾ID
 }
 ```
 
-**Killer feature:**
-- Fetches article body + TOP 3 comments (by reactions) in parallel
-- Provides community insights beyond the article alone
-- Smart truncation if content exceeds 20,000 characters
+**キラー機能:**
+- 記事本文+リアクション数TOP3コメントを並列取得
+- 記事だけでは得られないコミュニティの知見を提供
+- 20,000文字を超える場合のスマート切り詰め
 
-**What You Get:**
-- Article metadata (title, author, created date, stocks, likes, tags)
-- Cleaned article body (HTML removed)
-- Top 3 comments sorted by reaction count
+**取得内容:**
+- 記事メタデータ（タイトル、著者、作成日、ストック数、いいね数、タグ）
+- クリーンな記事本文（HTML除去済み）
+- リアクション数順のトップ3コメント
 
 </details>
 
 ---
 
 <details>
-<summary>🔍 Troubleshooting</summary>
+<summary>🔍 トラブルシューティング</summary>
 
-## Tools Not Recognized
+## ツールが認識されない
 
-### npx version
+### npx版
 
 ```bash
-# Test execution
+# 動作確認
 npx -y @akashishogo/mcp-server-qiita-researcher
 
-# Clear cache
+# キャッシュクリア
 npm cache clean --force
 ```
 
-Expected output:
+期待される出力:
 ```
 Qiita Researcher MCP Server started successfully
 Version: 1.0.0
 ```
 
-### Source code version
+### ソースコード版
 
 ```bash
-# Verify build
+# ビルド確認
 npm run build
 ls build/index.js
 
-# Check path
-pwd  # This output should match the path in your config file
+# パス確認
+pwd  # この出力が設定ファイルのパスと一致するか確認
 ```
 
-→ **Fully restart Claude** (close all windows)
+→ **Claudeを完全再起動**（すべてのウィンドウを閉じる）
 
 ---
 
-## Common Errors
+## よくあるエラー
 
-### "Qiita APIのレート制限に達しました"
+### 「Qiita APIのレート制限に達しました」
 
-**Cause:** Hit request limit
+**原因:** リクエスト制限に到達
 
-**Solution:**
-1. Wait for the time shown in the error message
-2. Add a Qiita access token (60 → 1000 requests/hour)
+**解決策:**
+1. エラーメッセージに表示された時間まで待つ
+2. Qiitaアクセストークンを設定（60 → 1000リクエスト/時）
 
-### "指定された記事が見つかりませんでした"
+### 「指定された記事が見つかりませんでした」
 
-**Cause:** Incorrect article ID or article is private/deleted
+**原因:** 記事IDが間違っているか、記事が非公開/削除
 
-**Solution:**
-- Verify article ID from URL
-- Check if article is public
+**解決策:**
+- URLから記事IDを確認
+- 記事が公開されているか確認
 
 ---
 
-## Error Handling
+## エラーハンドリング
 
-The server provides actionable error messages in Japanese:
+サーバーは実用的な日本語エラーメッセージを提供：
 
-- **429 (Rate Limit):** Specific retry time extracted from `Retry-After` header
-- **404 (Not Found):** Clear "article not found" message
-- **401 (Unauthorized):** Invalid access token notification
-- **Network Errors:** Connection failure details
+- **429（レート制限）:** `Retry-After`ヘッダーから具体的な再試行時間を提示
+- **404（見つからない）:** 「記事が見つかりませんでした」という明確なメッセージ
+- **401（認証エラー）:** 無効なアクセストークンの通知
+- **ネットワークエラー:** 接続失敗の詳細
 
 </details>
 
 ---
 
-## Features
+## 機能一覧
 
-- **Three Intelligent Tools**
-  - `search_articles` - Quality-focused article search
-  - `get_tech_trends` - One-shot trend gathering
-  - `read_article_smart` - Article + comments in one call
+- **3つのインテリジェントツール**
+  - `search_articles` - 品質重視の記事検索
+  - `get_tech_trends` - ワンショットトレンド収集
+  - `read_article_smart` - 記事+コメントを1回で取得
 
-- **Token Efficiency**
-  - HTML cleanup using cheerio
-  - Smart text truncation (20,000 char limit)
-  - Removes noise, keeps signal
+- **トークン効率**
+  - cheerioによるHTMLクリーンアップ
+  - スマートなテキスト切り詰め（20,000文字制限）
+  - ノイズを削減し、シグナルを維持
 
-- **Robust Error Handling**
-  - Rate limit detection (429) with specific retry times
-  - Actionable error messages in Japanese
-  - Graceful degradation
+- **堅牢なエラーハンドリング**
+  - レート制限検出（429）と具体的な再試行時間の提示
+  - 日本語での実用的なエラーメッセージ
+  - グレースフルデグラデーション
 
-- **Type Safety**
-  - Full TypeScript implementation
-  - Zod schemas for runtime validation
-  - Comprehensive error types
-
----
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
+- **型安全性**
+  - 完全なTypeScript実装
+  - ランタイム検証のためのZodスキーマ
+  - 包括的なエラー型定義
 
 ---
 
-## Contributing
+## ライセンス
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+MIT License - 詳細は[LICENSE](LICENSE)を参照してください。
 
 ---
 
-## Author
+## コントリビューション
+
+コントリビューションを歓迎します！お気軽にPull Requestを送ってください。
+
+---
+
+## 作者
 
 AKASHI SHOGO
 
 ---
 
-## Acknowledgments
+## 謝辞
 
-- Built with [Model Context Protocol SDK](https://github.com/modelcontextprotocol/typescript-sdk)
-- Powered by [Qiita API v2](https://qiita.com/api/v2/docs)
+- [Model Context Protocol SDK](https://github.com/modelcontextprotocol/typescript-sdk)を使用して構築
+- [Qiita API v2](https://qiita.com/api/v2/docs)を利用
