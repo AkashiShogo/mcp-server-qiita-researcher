@@ -392,6 +392,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 AKASHI SHOGO
 
+## Support
+
+If this project helped you, consider buying me a coffee!
+
+<a href="https://www.buymeacoffee.com/akashishogo"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=akashishogo&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 ---
 
 ## Acknowledgments
