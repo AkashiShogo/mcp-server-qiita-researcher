@@ -2,19 +2,11 @@
 
 **単なるAPIラッパーではなく、リサーチアシスタント。**
 
-[![npm version](https://img.shields.io/npm/v/@akashishogo/mcp-server-qiita-researcher)](https://www.npmjs.com/package/@akashishogo/mcp-server-qiita-researcher)
+[![npm version](https://img.shields.io/npm/v/mcp-server-qiita-researcher)](https://www.npmjs.com/package/mcp-server-qiita-researcher)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/akashishogo)
 
 [English README](./README.en.md)
-
----
-
-## 🎬 デモ
-
-![Demo Animation](docs/demo.gif)
-
-> Claudeに「Reactのトレンドを教えて」と尋ねるだけで、シュパパパッと高品質な記事+コミュニティの知見が返ってきます
 
 ---
 
@@ -27,7 +19,7 @@
   "mcpServers": {
     "qiita-researcher": {
       "command": "npx",
-      "args": ["-y", "@akashishogo/mcp-server-qiita-researcher"],
+      "args": ["-y", "mcp-server-qiita-researcher"],
       "env": {
         "QIITA_ACCESS_TOKEN": ""
       }
@@ -136,7 +128,7 @@ Claudeに自然に話しかけるだけ：
   "mcpServers": {
     "qiita-researcher": {
       "command": "npx",
-      "args": ["-y", "@akashishogo/mcp-server-qiita-researcher"],
+      "args": ["-y", "mcp-server-qiita-researcher"],
       "env": {
         "QIITA_ACCESS_TOKEN": ""
       }
@@ -293,7 +285,7 @@ src/
 
 ```bash
 # 動作確認
-npx -y @akashishogo/mcp-server-qiita-researcher
+npx -y mcp-server-qiita-researcher
 
 # キャッシュクリア
 npm cache clean --force

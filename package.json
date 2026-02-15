@@ -1,5 +1,5 @@
 {
-  "name": "@akashishogo/mcp-server-qiita-researcher",
+  "name": "mcp-server-qiita-researcher",
   "version": "1.0.0",
   "description": "A powerful Qiita MCP server with trend scouting and smart reading capabilities.",
   "type": "module",
@@ -24,7 +24,7 @@
     "ai",
     "claude"
   ],
-  "author": "",
+  "author": "akashishogo",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

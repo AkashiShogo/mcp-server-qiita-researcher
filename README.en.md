@@ -2,19 +2,11 @@
 
 **Not just an API wrapper, but a Research Assistant.**
 
-[![npm version](https://img.shields.io/npm/v/@akashishogo/mcp-server-qiita-researcher)](https://www.npmjs.com/package/@akashishogo/mcp-server-qiita-researcher)
+[![npm version](https://img.shields.io/npm/v/mcp-server-qiita-researcher)](https://www.npmjs.com/package/mcp-server-qiita-researcher)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/akashishogo)
 
 [日本語版README](./README.md)
-
----
-
-## 🎬 Demo
-
-![Demo Animation](docs/demo.gif)
-
-> Ask Claude "Show me React trends on Qiita" and watch it instantly return high-quality articles + community insights
 
 ---
 
@@ -27,7 +19,7 @@
   "mcpServers": {
     "qiita-researcher": {
       "command": "npx",
-      "args": ["-y", "@akashishogo/mcp-server-qiita-researcher"],
+      "args": ["-y", "mcp-server-qiita-researcher"],
       "env": {
         "QIITA_ACCESS_TOKEN": ""
       }
@@ -136,7 +128,7 @@ Edit `~/.claude.json`:
   "mcpServers": {
     "qiita-researcher": {
       "command": "npx",
-      "args": ["-y", "@akashishogo/mcp-server-qiita-researcher"],
+      "args": ["-y", "mcp-server-qiita-researcher"],
       "env": {
         "QIITA_ACCESS_TOKEN": ""
       }
@@ -293,7 +285,7 @@ src/
 
 ```bash
 # Test execution
-npx -y @akashishogo/mcp-server-qiita-researcher
+npx -y mcp-server-qiita-researcher
 
 # Clear cache
 npm cache clean --force
