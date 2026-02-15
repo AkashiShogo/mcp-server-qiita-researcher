@@ -369,6 +369,20 @@ The server provides actionable error messages in Japanese:
 
 ---
 
+## Disclaimer
+
+This tool allows users to search and summarize Qiita articles using the official Qiita API.
+- This is an unofficial tool and is not affiliated with Qiita Inc.
+- Please ensure you comply with [Qiita's Terms of Service](https://qiita.com/terms) and [API Policy](https://qiita.com/api-policy) when using this tool.
+- The developer is not responsible for any issues or damages arising from the use of this tool.
+
+本ツールはQiita公式APIを使用して記事を検索・要約する非公式ツールです。
+- Qiita株式会社とは一切関係ありません。
+- 利用の際は、必ず[Qiita利用規約](https://qiita.com/terms)および[API利用規約](https://qiita.com/api-policy)を遵守してください。
+- 本ツールの使用により生じた問題や損害について、開発者は一切の責任を負いません。
+
+---
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.

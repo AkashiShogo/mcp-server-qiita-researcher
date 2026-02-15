@@ -112,7 +112,9 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 使用例:
 - 記事を読みながら、コミュニティの有益なフィードバックも同時に確認
 - 記事だけでは分からない実践的なTipsをコメントから発見
-- 技術的な議論や補足情報を効率的に収集`,
+- 技術的な議論や補足情報を効率的に収集
+
+IMPORTANT: When summarizing or explaining specific articles, you MUST clearly state the **Title** and **URL** of the source article at the beginning or end of the summary to ensure proper attribution.`,
         inputSchema: {
           type: 'object',
           properties: {
